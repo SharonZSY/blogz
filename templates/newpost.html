@@ -6,14 +6,13 @@
     <form method='POST' action = '/newpost'>
         <label>Title for your new blog:</label>
         <br>
-        <input type='text' name='title' />
+        <textarea name = 'title' rows = '2' cols = '50'>{{title}}</textarea>
         <p>{{title_error}}</p>
         <br>
         <label>Your new blog:</label>
         <br>
-        <input type='textarea' name='blog' />
+        <textarea name = 'blog' rows = '10' cols = '50'>{{blog}}</textarea>
         <p>{{text_error}}</p>
-        <br>
         <br>
         <input type='submit' value='Add Entry' />
     </form>

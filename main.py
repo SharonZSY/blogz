@@ -40,9 +40,11 @@ def newpost():
         
         if blog == '':
             text_error = 'Enter a blog post.'
-        
+
         if title_error != '' or text_error != '':
-            return render_template ('newpost.html', title_error = title_error, 
+            return render_template ('newpost.html', title = title,
+                                                    blog = blog,
+                                                    title_error = title_error, 
                                                     text_error = text_error)
         else:
             new_blog = Blog(title, blog)
