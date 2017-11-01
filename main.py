@@ -40,8 +40,8 @@ def require_login():
 
 @app.route('/', methods=['GET'])
 def index():
-    
-    return render_template('index.html')
+    users = User.query.all()
+    return render_template('index.html', users = users)
 
 @app.route('/blog', methods = ['POST','GET'] )
 def blog():
